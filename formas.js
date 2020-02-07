@@ -5,4 +5,14 @@ class Formas {
         this.tamX=tamX;
         this.tamY=tamY;
     }
+    getPosx(){
+        return this.posX;
+    }
+      
+    getPosy(){
+        return this.posY;
+    }
+
+
+
 }

@@ -1,9 +1,5 @@
+
 let forms;
-
-
-
-
-
 function setup(){
 
 forms=[];
