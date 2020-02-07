@@ -1,5 +1,8 @@
 
+let forms;
 function setup(){
+
+forms=[];
 createCanvas(600,600);
  img = loadImage("X/solo.png");
 background(255);
@@ -9,6 +12,8 @@ function draw(){
 }
 function mouseClicked(){
 
-if(mouseX)
+if(mouseX){
+
+}
 
 }
