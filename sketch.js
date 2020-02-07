@@ -1,4 +1,12 @@
+let forms;
+
+
+
+
+
 function setup(){
+
+forms=[];
 createCanvas(600,600);
 background(0);
 }
