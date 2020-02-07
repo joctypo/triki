@@ -1,9 +1,11 @@
+
 function setup(){
 createCanvas(600,600);
-background(0);
+ img = loadImage("X/solo.png");
+background(255);
 }
 function draw(){
-
+    image(img, 0, 0)
 }
 function mousePressed(){
 
