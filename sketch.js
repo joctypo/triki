@@ -15,6 +15,6 @@ function draw(){
 }
 function mouseClicked(){
 
-if(mouseX)
+if(mouseX){}
 
 }
