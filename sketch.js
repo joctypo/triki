@@ -7,6 +7,8 @@ background(255);
 function draw(){
     image(img, 0, 0)
 }
-function mousePressed(){
+function mouseClicked(){
+
+if(mouseX)
 
 }
