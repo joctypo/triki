@@ -13,6 +13,8 @@ background(0);
 function draw(){
 
 }
-function mousePressed(){
+function mouseClicked(){
+
+if(mouseX)
 
 }
