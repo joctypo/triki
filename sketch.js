@@ -1,6 +1,7 @@
 let fotoEquis;
 let fotoCirculo;
 let gana;
+let imgGana;
 
 let forms;
 let matriz = [
@@ -20,6 +21,7 @@ function setup(){
 
     fotoCirculo = loadImage('fotos/circulo.png');
     fotoEquis = loadImage('fotos/equis.png');
+    imgGana = loadImage('fotos/ganaste.png');
  
  
 }
@@ -41,11 +43,7 @@ function draw(){
     ganador();
 
     if(gana == true){
-        fill(170,0,0);
-        rect(200,200,300, 100);
-        fill(255);
-        textSize(50);
-        text('Ganaste',300,250);  
+        image(imgGana,100,200);
     }
 }
 
