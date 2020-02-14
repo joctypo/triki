@@ -11,6 +11,9 @@ class Formas {
         return this.posY;
     }
 
+    dibujar(){
+        
+    }
 
 
 }

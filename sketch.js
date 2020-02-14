@@ -10,8 +10,8 @@ let laX;
 
 function setup(){
     createCanvas(600,600);
-    circulo =[];
-    laX=[];
+    forms =[];
+
 }
 
 
@@ -21,14 +21,12 @@ function setup(){
 function draw(){
     background(100);
     fill(255);
-    
-
-
-for(let i = 0; i < 3; i++){
-    for(let j = 0; j < 3; j++){
-        rect(200*i,200*j,200,200);
+    for (let i = 0; i < forms.length; i++) {
+        forms[i].dibujar();
     }
-}
+
+
+
 switch (valor){
     case 1:
         circulo.pintarCirculo();
@@ -80,5 +78,9 @@ function mouseClicked() {
     if(mouseX>400 && mouseX<600 && mouseY>400 && mouseY<600){
         valor;
     }
-
+    for(let i = 0; i < 3; i++){
+        for(let j = 0; j < 3; j++){
+            rect(200*i,200*j,200,200);
+        }
+    }
 }
