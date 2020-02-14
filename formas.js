@@ -1,9 +1,7 @@
 class Formas {
-    constructor(posX, posY, tamX, tamY){
+    constructor(posX, posY){
         this.posX=posX;
         this.posY=posY;
-        this.tamX=tamX;
-        this.tamY=tamY;
     }
     getPosx(){
         return this.posX;
