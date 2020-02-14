@@ -24,6 +24,7 @@ function setup(){
     imgGana = loadImage('fotos/ganaste.png');
  
  
+
 }
 
 
@@ -40,11 +41,14 @@ function draw(){
     for (let i = 0; i < forms.length; i++) {
         forms[i].dibujar();
     }
+    
+
     ganador();
 
     if(gana == true){
         image(imgGana,100,200);
     }
+
 }
 
 
@@ -77,11 +81,11 @@ function mouseClicked() {
 function ganador(){
 
     for(let i = 0; i < 3; i++){
-
+    // evaluar en filas
         if(matriz[i][0]!=0 && matriz[i][0]==matriz[i][1] && matriz[i][1]==matriz[i][2]){
              gana = true;
         }
-
+    //evaluar en columnas
         if(matriz[0][i]!=0 && matriz[0][i]==matriz[1][i] && matriz[1][i]==matriz[2][i]){
             gana = true;   
         }
