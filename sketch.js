@@ -76,5 +76,18 @@ function mouseClicked() {
 
 }
 
+function ganador(){
+
+    for(let i = 0; i < 3; i++){
+
+        if(matriz[i][0]!=0 && matriz[i][0]==matriz[i][1] && matriz[i][1]==matriz[i][2]){
+             gana = true;
+        }
+
+        if(matriz[0][i]!=0 && matriz[0][i]==matriz[1][i] && matriz[1][i]==matriz[2][i]){
+            gana = true;   
+        }
+}}
+
 
 
