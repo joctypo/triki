@@ -1,3 +1,7 @@
+let fotoEquis;
+let fotoCirculo;
+let gana;
+
 let forms;
 let matriz = [
     [0,0,0],
@@ -12,7 +16,12 @@ function setup(){
     createCanvas(600,600);
     forms =[];
     turno= false;
- //perra
+    gana=false;
+
+    fotoCirculo = loadImage('fotos/circulo.png');
+    fotoEquis = loadImage('fotos/equis.png');
+ 
+ 
 
 }
 
@@ -31,6 +40,17 @@ function draw(){
         forms[i].dibujar();
     }
     
+
+    ganador();
+
+    if(gana == true){
+        fill(170,0,0);
+        rect(200,200,300, 100);
+        fill(255);
+        textSize(50);
+        text('Ganaste',300,250);  
+    }
+
 }
 
 
@@ -43,51 +63,35 @@ function mouseClicked() {
     if(matriz[posicion1][posicion2]==0){
         if (turno==false){
 
-            forms.push(new Circulo((posicion1+1)*100,(posicion2+1)*100));
+            forms.push(new Circulo(posicion1*200,posicion2*200));
             matriz[posicion1][posicion2]=1;
             turno=true;
         }else if (turno==true){
-            forms.push(new X((posicion1*100)+100,(posicion2*100)+100));
+            forms.push(new X(posicion1*200,posicion2*200));
             turno=false;
             matriz[posicion1][posicion2]=2;
         }
 
     }
+
+
    
 
 
 }
 
-function evaluarclick() {
-    //primera fila
-    if(mouseX>0 && mouseX<200 && mouseY>0 && mouseY<200){
-        valor;
-    }
-    if(mouseX>200 && mouseX<400 && mouseY>0 && mouseY<200){
-        valor;
-    }
-    if(mouseX>400 && mouseX<600 && mouseY>0 && mouseY<200){
-        valor;
-    }
-    //segunda fila
-    if(mouseX>0 && mouseX<200 && mouseY>200 && mouseY<400){
-        valor;
-    }
-    if(mouseX>200 && mouseX<400 && mouseY>200 && mouseY<400){
-        valor;
-    }
-    if(mouseX>400 && mouseX<600 && mouseY>200 && mouseY<400){
-        valor;
-    }
-    //tercera fila
-    if(mouseX>0 && mouseX<200 && mouseY>400 && mouseY<600){
-        valor;
-    }
-    if(mouseX>200 && mouseX<400 && mouseY>400 && mouseY<600){
-        valor;
-    }
-    if(mouseX>400 && mouseX<600 && mouseY>400 && mouseY<600){
-        valor;
-    }
+function ganador(){
 
-}
+    for(let i = 0; i < 3; i++){
+    // evaluar en filas
+        if(matriz[i][0]!=0 && matriz[i][0]==matriz[i][1] && matriz[i][1]==matriz[i][2]){
+             gana = true;
+        }
+    //evaluar en columnas
+        if(matriz[0][i]!=0 && matriz[0][i]==matriz[1][i] && matriz[1][i]==matriz[2][i]){
+            gana = true;   
+        }
+}}
+
+
+
