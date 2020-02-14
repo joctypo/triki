@@ -27,11 +27,6 @@ function draw(){
     for (let i = 0; i < forms.length; i++) {
         forms[i].dibujar();
     }
-fill(20);
-line(0,200,600,200);
-line(0,400,600,400);
-line(200,0,200,600);
-line(400,0,400,600);
 }
 
 
@@ -40,7 +35,7 @@ line(400,0,400,600);
 function mouseClicked() {
     posicion1= parseInt(mouseX/200);
     posicion2= parseInt(mouseY/200);
-    
+
     if(matriz[posicion1][posicion2]==0){
         if (turno==false){
             forms.push(new circulo(100,100));
