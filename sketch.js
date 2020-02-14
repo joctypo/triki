@@ -13,7 +13,7 @@ function setup(){
     forms =[];
     turno= false;
  //perra
- 
+
 }
 
 
@@ -30,6 +30,7 @@ function draw(){
     for (let i = 0; i < forms.length; i++) {
         forms[i].dibujar();
     }
+    
 }
 
 
