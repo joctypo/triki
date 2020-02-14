@@ -3,7 +3,6 @@ class X extends Formas{
     }
 dibujar(){
     fill(0,255,0);
-    rectMode(CENTER);
     rect(this.posX,this.posY, 100, 100);
 }
 

@@ -40,7 +40,7 @@ function mouseClicked() {
 
     if(matriz[posicion1][posicion2]==0){
         if (turno==false){
-            forms.push(new Circulo(posicion1*200,posicion2*200));
+            forms.push(new Circulo(posicion1*400,posicion2*400));
             matriz[posicion1][posicion2]=1;
             turno=true;
         }else if (turno==true){
