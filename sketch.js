@@ -41,11 +41,11 @@ function mouseClicked() {
     if(matriz[posicion1][posicion2]==0){
         if (turno==false){
 
-            forms.push(new Circulo((posicion1+1)*400,(posicion2+1)*400));
+            forms.push(new Circulo((posicion1+1)*100,(posicion2+1)*100));
             matriz[posicion1][posicion2]=1;
             turno=true;
         }else if (turno==true){
-            forms.push(new X((posicion1+1)*100,(posicion2+1)*100));
+            forms.push(new X((posicion1*100)+100,(posicion2*100)+100));
             turno=false;
             matriz[posicion1][posicion2]=2;
         }
