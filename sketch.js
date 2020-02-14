@@ -11,6 +11,7 @@ let posicion2;
 function setup(){
     createCanvas(600,600);
     forms =[];
+    turno= false;
 
 }
 
@@ -18,9 +19,10 @@ function setup(){
 
 function draw(){
     background(100);
-    fill(255);
+    
     for(let i = 0; i < 3; i++){
         for(let j = 0; j < 3; j++){
+            fill(255);
             rect(200*i,200*j,200,200);
         }
     }
@@ -38,7 +40,7 @@ function mouseClicked() {
 
     if(matriz[posicion1][posicion2]==0){
         if (turno==false){
-            forms.push(new circulo(100,100));
+            forms.push(new Circulo(100,100));
             turno=true;
         }else if (turno==true){
             forms.push(new X(100,100));
