@@ -4,17 +4,13 @@ let matriz = [
     [0,0,0],
     [0,0,0],
 ];
-
-let circulo;
-let laX;
+let turno;
 
 function setup(){
     createCanvas(600,600);
     forms =[];
 
 }
-
-
 
 
 
@@ -25,20 +21,6 @@ function draw(){
         forms[i].dibujar();
     }
 
-
-
-switch (valor){
-    case 1:
-        circulo.pintarCirculo();
-    break;
-
-    case 2:
-        laX.pintarX();  
-    break;
-}
-
-console.log(valor);
-
 fill(20);
 line(0,200,600,200);
 line(0,400,600,400);
@@ -46,8 +28,13 @@ line(200,0,200,600);
 line(400,0,400,600);
 }
 function mouseClicked() {
-    valor+=1;
     
+    if (turno==false){
+        forms.push(new circulo(100,100));
+    }else if (turno==true){
+        forms.push(new X(100,100));
+    }
+
     //primera fila
     if(mouseX>0 && mouseX<200 && mouseY>0 && mouseY<200){
         valor;
