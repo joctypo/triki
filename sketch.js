@@ -1,21 +1,29 @@
 let forms;
-let valor = 0;
 let matriz = [
-    [valor,valor,valor],
-    [valor,valor,valor],
-    [valor,valor,valor],
+    [0,0,0],
+    [0,0,0],
+    [0,0,0],
 ];
 
-let circulo = new Circulo (100,100);
-let laX= new X (300,300);
+let circulo;
+let laX;
 
 function setup(){
-createCanvas(600,600);
-
+    createCanvas(600,600);
+    circulo =[];
+    laX=[];
 }
+
+
+
+
+
 function draw(){
     background(100);
     fill(255);
+    
+
+
 for(let i = 0; i < 3; i++){
     for(let j = 0; j < 3; j++){
         rect(200*i,200*j,200,200);
